@@ -225,7 +225,7 @@ module Neography
           }
         end
 
-        request[:body].merge!({ :params => params }) if params
+        request[:body].merge!({ :parameters => params }) if params
 
         request
       end
@@ -236,7 +236,7 @@ module Neography
         post @connection.gremlin_path do
           {
             :script => script,
-            :params => params
+            :parameters => params
           }
         end
       end
